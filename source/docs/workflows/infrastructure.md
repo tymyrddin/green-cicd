@@ -21,7 +21,7 @@ repository for modules and infrastructure-live repository for live configuration
 code, promote immutable versions across environments, and keep it DRY ("Don't repeat yourself"). There are distinct differences in the way the code is tested, used, and deployed between the two types of infrastructure 
 code.
 
-## Clone and branch
+## Cloning and branching
 
 The first step in making changes to a code base is to clone the repository locally and begin development on a new 
 branch. Using git:
@@ -76,3 +76,23 @@ directly from a Git repository. Use a Git tag to mark a revision with a human fr
 artifact.
 
 For live infrastructure config, there is usually no release artifact.
+
+## Deploying
+
+To deploy infrastructure modules, references to the modules in the live infrastructure config need to be created or 
+updated. If the module is already deployed, this may be as simple as bumping the ref tag in the live config. If the 
+module is being deployed for the first time, then this will require creating a new configuration in the live 
+infrastructure config to deploy the module. 
+
+In terms of automation, an automated deployment of infrastructure modules may be risky as a simple change could destroy 
+the database. But, it is not practical to always manually roll out deployments even for infrastructure modules, and in 
+some circumstances that can be more risky from a security perspective (like increasing attack surface by passing out 
+admin credentials to all developers). To handle this, human verification to the automated steps of the workflow can be
+used. Automated deployments like with application code, but requiring a human approval step of the plan before 
+proceeding.
+
+For live infrastructure config, deploying the code is applying the code to the live environment and is
+highly dependent on the tool. For example, `terraform apply` or `kubectl apply`. 
+
+In terms of automation, what needs automating depends on the 
+nature of the change. The pipeline differs based on which configurations were updated.

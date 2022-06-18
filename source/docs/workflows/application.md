@@ -11,7 +11,7 @@ Assuming trunk based development:
 *   Automated testing
 *   Feature toggles
 
-## Clone and branch
+## Cloning and branching
 
 The first step in making changes to a code base is to clone the repository locally and begin development on a new 
 branch. Using git:
@@ -53,3 +53,12 @@ The release artifact will vary widely from project to project for application co
 source file tarball or a jar file executable to a docker image or a VM image. Make sure the artifact is immutable, and 
 that it has a unique version number.
 
+## Deploying
+
+Deploying the release artifact to the environment depends on how the code is packaged. If it is a library, then it will 
+be deployed when the application that consumes it updates the library version. In this case, nothing needs to be done 
+to deploy it to the application. For services, the application can be deployed to live servers. For docker images, this 
+might mean updating service definitions for the docker cluster (ECS or Kubernetes). For machine images, this might mean 
+updating the autoscaling group to deploy instances with the new image. 
+
+There are various strategies for deploying application code, such as canary and blue-green deployments. 
