@@ -11,7 +11,7 @@ CI/CD threat model
 - Entry points and trust boundaries are not recognised, like publicly-exposed management planes, APIs and services.
 - An attacker that possesses a properly permissioned authentication token can easily threaten a cloud service provider’s publicly-exposed control plane.
 
-It is not so much that the attacks have changed, attack surface has increased, and is distributed with many endpoints.
+It is not so much that the attacks have changed, but the attack surface has increased, and is now distributed with many access points.
 
 .. toctree::
    :glob:
