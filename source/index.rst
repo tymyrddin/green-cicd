@@ -17,6 +17,14 @@ It is not so much that the attacks have changed, but the attack surface has incr
    :glob:
    :maxdepth: 1
    :includehidden:
+   :caption: Workflows
+
+   docs/workflows/*
+
+.. toctree::
+   :glob:
+   :maxdepth: 1
+   :includehidden:
    :caption: Adversaries
 
    docs/adversaries/*

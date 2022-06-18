@@ -1,4 +1,4 @@
-# De-anonymisation threat model
+# CI/CD threat model
 
 ![Publish DA Threat model using Sphinx](https://github.com/tymyrddin/cicd-threat-model/workflows/Publish%20CICD%20Threat%20model%20using%20Sphinx/badge.svg?branch=main)
  Deployed: https://tymyrddin.github.io/cicd-threat-model/
