@@ -84,15 +84,14 @@ updated. If the module is already deployed, this may be as simple as bumping the
 module is being deployed for the first time, then this will require creating a new configuration in the live 
 infrastructure config to deploy the module. 
 
-In terms of automation, an automated deployment of infrastructure modules may be risky as a simple change could destroy 
-the database. But, it is not practical to always manually roll out deployments even for infrastructure modules, and in 
-some circumstances that can be more risky from a security perspective (like increasing attack surface by passing out 
-admin credentials to all developers). To handle this, human verification to the automated steps of the workflow can be
-used. Automated deployments like with application code, but requiring a human approval step of the plan before 
-proceeding.
+An automated deployment of infrastructure modules may be risky as a simple change could destroy the database. 
+But, sometimes it is not practical to manually roll out deployments even for infrastructure modules. In some 
+cases manual roll out can be more risky from a security perspective (like increasing attack surface by passing out 
+admin credentials to all developers). Human verification to the automated steps of the workflow can be
+used. 
 
 For live infrastructure config, deploying the code is applying the code to the live environment and is
 highly dependent on the tool. For example, `terraform apply` or `kubectl apply`. 
 
-In terms of automation, what needs automating depends on the 
-nature of the change. The pipeline differs based on which configurations were updated.
+What needs automating depends on the nature of the change. The pipeline differs based on which 
+configurations were updated.
