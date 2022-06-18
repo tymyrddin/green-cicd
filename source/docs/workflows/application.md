@@ -39,8 +39,8 @@ reviewing general code design, enforcing style guides, or identifying potential 
                                                                                                                         
 Set up a CI server (such as Jenkins or CircleCI) with commit hooks that automatically trigger testing of any branch 
 submitted for review. Most developers will run a subset of the tests that relate to the feature work being done, leading 
-to faster feedback cycles. Use this setup for a full test suite that takes a long time to run and a consistent build 
-process on a repeatable and isolated platform.
+to faster feedback cycles. Use this setup for running a test suite that takes a long time to run, and for having a 
+consistent build process on a repeatable and isolated platform.
 
 The CI server is to run the full automated test suite for the application code, and report the results as a summary, 
 using a green check mark to indicate success or a red "X" for failure.
