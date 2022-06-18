@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'CI/CD Threat model'
+project = 'CI/CD threat model'
 copyright = '2022, Ty Myrddin'
 author = 'Ty Myrddin'
 
