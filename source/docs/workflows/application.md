@@ -1,4 +1,4 @@
-# Application code workflow
+# Application code workflows
 
 An overview of the background info, design, and implementation of a production-ready CI/CD pipeline for application 
 code.
@@ -46,3 +46,10 @@ The CI server is to run the full automated test suite for the application code, 
 using a green check mark to indicate success or a red "X" for failure.
 
 ## Merging and releasing
+
+After merging the code into trunk, a new, immutable, versioned release artifact can be generated that can be deployed.
+
+The release artifact will vary widely from project to project for application code. This could be anything from a 
+source file tarball or a jar file executable to a docker image or a VM image. Make sure the artifact is immutable, and 
+that it has a unique version number.
+

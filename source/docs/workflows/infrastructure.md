@@ -1,4 +1,4 @@
-# Infrastructure code workflow
+# Infrastructure code workflows
 
 An overview of the background info, design, and implementation of a production-ready CI/CD pipeline for infrastructure 
 code.
@@ -68,3 +68,11 @@ the run for further analysis. This has potential security issues as the logs for
 secrets. Encrypt the results before it is posted and guard who has access.
 
 ## Merging and releasing
+
+After merging the code into trunk, a new, immutable, versioned release artifact can be generated that can be deployed.
+
+Infrastructure modules are usually consumed as a library. Most infrastructure as code tools consume the libraries 
+directly from a Git repository. Use a Git tag to mark a revision with a human friendly name to generate the release 
+artifact.
+
+For live infrastructure config, there is usually no release artifact.
