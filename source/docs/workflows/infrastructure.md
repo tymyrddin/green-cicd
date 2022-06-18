@@ -16,20 +16,15 @@ And two types of infrastructure code:
 *   Infrastructure Modules for deploying specific components of the infrastructure, such as Virtual Private Clouds (VPCs), databases, and docker clusters like Elastic Container Service, Kubernetes, Nomad, etc.
 *   Live infrastructure configurations, specific parameters for each component in the infrastructure architecture, the front-end for its deployments.
 
-If modules are "blueprints" then the live configuration are the "houses" built using the "blueprints." Each "house" may have slightly different features or customisation, even though they share a common blueprint.
-
 Typically, these two different types of infrastructure code have separate repositories, an infrastructure-modules 
 repository for modules and infrastructure-live repository for live configuration. This makes it easier to test module 
-code, promote immutable versions across environments, and keep it DRY ("Don't repeat yourself").
-
-There are distinct differences in the way the code is tested, used, and deployed between the two types of infrastructure 
+code, promote immutable versions across environments, and keep it DRY ("Don't repeat yourself"). There are distinct differences in the way the code is tested, used, and deployed between the two types of infrastructure 
 code.
-
-Most code will go through a workflow like this:
 
 ## Clone and branch
 
-The first step in making changes to a code base is to clone the repository locally and begin development on a new branch. Using git:
+The first step in making changes to a code base is to clone the repository locally and begin development on a new 
+branch. Using git:
 
     git clone $REPO_URL
     git checkout -b $NEW_BRANCH_NAME
@@ -50,3 +45,26 @@ check the planned actions Terraform will take. The trunk should be a true reflec
 expect there to be no changes to make on a fresh clone of trunk.
 
 ## Making code changes
+
+Testing infrastructure modules can take a long time because it requires deploying infrastructure (on 10-20 minutes). 
+There may be ways to improve the test cycles for infrastructure modules.
+
+Testing live infrastructure config can be done in minutes (because it only involves doing a dry run). 
+
+## Pull (Merge) requests and reviews
+
+Focus the review process on things that are hard to check through automated testing, such as checking security flaws, 
+reviewing general code design, enforcing style guides, or identifying potential performance issues on larger data sets.
+
+## Running automated tests
+
+The CI server can run automated tests for infrastructure modules. Tests for infrastructure modules can take a long 
+time to run (costly). Run the tests only for the modules that changed instead of doing a regression test for all the 
+modules on every commit. Run a nightly build that runs the whole suite on a regular interval that is less frequent than 
+developers updating the code. 
+
+For live infrastructure config, the CI server can perform a dry run of the infrastructure and post the entire log of 
+the run for further analysis. This has potential security issues as the logs for a dry run would typically include 
+secrets. Encrypt the results before it is posted and guard who has access.
+
+## Merging and releasing

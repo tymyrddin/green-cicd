@@ -11,8 +11,6 @@ Assuming trunk based development:
 *   Automated testing
 *   Feature toggles
 
-Most code will go through this workflow:
-
 ## Clone and branch
 
 The first step in making changes to a code base is to clone the repository locally and begin development on a new 
@@ -29,3 +27,22 @@ language, run the server code to bring up a local copy of the application and ma
 server in the browser. Or, run the automated test suite associated with the application.
 
 ## Making code changes
+
+Testing application code can be done in seconds (because everything is local).
+
+## Pull (Merge) requests and reviews
+
+Focus the review process on things that are hard to check through automated testing, such as checking security flaws, 
+reviewing general code design, enforcing style guides, or identifying potential performance issues on larger data sets.
+
+## Running automated tests
+                                                                                                                        
+Set up a CI server (such as Jenkins or CircleCI) with commit hooks that automatically trigger testing of any branch 
+submitted for review. Most developers will run a subset of the tests that relate to the feature work being done, leading 
+to faster feedback cycles. Use this setup for a full test suite that takes a long time to run and a consistent build 
+process on a repeatable and isolated platform.
+
+The CI server is to run the full automated test suite for the application code, and report the results as a summary, 
+using a green check mark to indicate success or a red "X" for failure.
+
+## Merging and releasing
