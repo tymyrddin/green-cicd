@@ -14,3 +14,6 @@ A source code creation pipeline may incorporate any of the following:
 * Code-quality tools, such as black, mypy, flake8, isort, and vulnerability scanners. 
 * Code repositories and version control systems, such as Git.
 
+## Mitigations
+
+* Lock down development machines
