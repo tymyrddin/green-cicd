@@ -3,6 +3,8 @@
 An overview of the background info, design, and implementation of a production-ready CI/CD pipeline for application 
 code.
 
+![Simplified application pipeline](../../_static/img/application-pipeline.png)
+
 ## Assumptions
 
 Assuming trunk based development:
