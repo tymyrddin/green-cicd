@@ -39,13 +39,13 @@ reviewing general code design, enforcing style guides, or identifying potential 
 
 ## Running automated tests
                                                                                                                         
-Set up a CI server (such as Jenkins or CircleCI) with commit hooks that automatically trigger testing of any branch 
-submitted for review. Most developers will run a subset of the tests that relate to the feature work being done, leading 
-to faster feedback cycles. Use this setup for running a test suite that takes a long time to run, and for having a 
-consistent build process on a repeatable and isolated platform.
+Set up a CI server (such as Jenkins or CircleCI) giving a consistent build process on a repeatable and isolated 
+platform, with commit hooks that automatically trigger testing of any branch submitted for review. Most developers will 
+run a subset of the tests that relate to the feature branch being done, leading to faster feedback cycles. Include 
+automated tests designed to verify that the change didn’t create any regressions while testing a new change.
 
 The CI server is to run the full automated test suite for the application code, and report the results as a summary, 
-using a green check mark to indicate success or a red "X" for failure.
+using a simple green check mark to indicate success or a red "X" for failure.
 
 ## Merging and releasing
 
@@ -56,6 +56,9 @@ source file tarball or a jar file executable to a docker image or a VM image. Ma
 that it has a unique version number.
 
 ## Deploying
+
+Once review and tests pass, the deployment part of the CI/CD pipeline begins. The code can be deployed to development, 
+testing, or production systems.
 
 Deploying the release artifact to the environment depends on how the code is packaged. If it is a library, then it will 
 be deployed when the application that consumes it updates the library version. In this case, nothing needs to be done 
