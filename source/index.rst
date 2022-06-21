@@ -6,14 +6,17 @@
 CI/CD threat model
 ==============================================
 
+CI/CD pipelines were conceptualised with speed and convenience (and profit) in mind, not security. Wonderful!
+
 Common problems:
 
 - Many threat modeling processes are available, which can lead to confusion, especially for teams relying on routines and named processes. This can lead to inadequate or inappropriate cybersecurity investments, or worse, overconfidence in security posture and risk mitigation capabilities, which increases vulnerability to attacks.
 - Threat modelling is easy to do for simple, monolithic applications, less so when it is scaled up and migrated to the cloud, and an application team is responsible for full-stack management.
 - Entry points and trust boundaries might not be recognised, like publicly-exposed management planes, APIs and services.
-- An attacker that possesses a properly permissioned authentication token can easily threaten a cloud service provider’s publicly-exposed control plane.
+- An attacker that possesses a properly permissioned authentication token can threaten a cloud service provider’s publicly-exposed control plane.
 
-It is not so much that the attacks have changed, but the attack surface and number of planes increased, and contains many access points.
+It is not so much that the type of attacks have changed, but the attack surface and number of planes and access points
+have increased.
 
 .. toctree::
    :glob:
