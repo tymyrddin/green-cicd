@@ -67,11 +67,3 @@ have increased.
    :caption: Threats
 
    docs/threats/*
-
-.. toctree::
-   :glob:
-   :maxdepth: 1
-   :includehidden:
-   :caption: Impacts
-
-   docs/impacts/*
