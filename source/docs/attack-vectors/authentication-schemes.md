@@ -8,5 +8,3 @@ hard-coding these credentials into the code, but if an adversary can dump these 
 resources. No need for a full-scale attack, simply access one of the services in an application and use it to exploit 
 expensive resources and launch further attacks on an application. 
 
-The increasing consumption of secrets by CI/CD pipelines introduces complexities, making it difficult to store, 
-transmit, and audit secrets securely.
