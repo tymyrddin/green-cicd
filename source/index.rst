@@ -13,7 +13,7 @@ Common problems:
 - When teams rely on routines and named processes for threat modelling, this can lead to inadequate investments, overconfidence and increased vulnerability to attacks.
 - Threat modelling is easy to do for simple, monolithic applications, less so when it is scaled up and migrated to the cloud, and an application team is responsible for full-stack management.
 - Entry points and trust boundaries might not be recognised, like publicly-exposed management planes, APIs and services.
-- An attacker that possesses a properly permissioned authentication token can threaten a cloud service provider’s publicly-exposed control plane.
+- An adversary possessing a permissioned authentication token can threaten a cloud service provider’s publicly-exposed control plane.
 - Infrastructure as Code evolved to solve the problem of environment drift in the release pipeline, and can make the infrastructure configuration available to a CI/CD application pipeline.
 - The increasing consumption of secrets by CI/CD pipelines introduces complexities, making it difficult to store, transmit, and audit secrets securely.
 
