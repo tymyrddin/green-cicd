@@ -9,7 +9,7 @@ CI/CD threat model
 CI/CD pipelines were conceptualised with speed and convenience (and profit) in mind, not security. How wonderful for
 adversaries!
 
-[DevOps threat modelling](https://snyk.io/learn/threat-modeling/) is easy to do for simple, monolithic applications,
+DevOps threat modelling is easy to do for simple, monolithic applications,
 less so when it is scaled up and migrated to the cloud, and an application team is responsible for full-stack management
 in ever faster Software Development Life Cycles (SDLC). It is not so much that the type of attacks have changed, but the
 attack surface and number of planes and access points have increased, while the time spent on considering security
@@ -70,3 +70,8 @@ Common problems:
    :caption: Threats
 
    docs/threats/*
+
+.. toctree::
+   :caption: All threat models
+
+   Overview <https://tymyrddin.github.io/threat-models/>
