@@ -7,4 +7,4 @@ target weak parties within the supply chain to breach others connected to the ch
 
 ## Related attack trees
 
-* [Poison open source supply chains](https://tymyrddin.github.io/attack-trees/docs/malware/Supply-chain.html)
+* [Poison open source supply chains](attack-trees:docs/malware/Supply-chain)
