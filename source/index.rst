@@ -77,4 +77,4 @@ Common problems:
 
    Overview threat models <https://tymyrddin.github.io/threat-models/>
    CI/CD attack trees <https://tymyrddin.github.io/attack-trees/docs/cicd/README.html>
-   Applications and CI/CD <https://wyrd.netlify.app/>
+   Building application and CI/CD targets <https://wyrd.netlify.app/>
