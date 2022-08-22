@@ -7,4 +7,4 @@ target weak parties within the supply chain to breach others connected to the ch
 
 ## Related attack trees
 
-* [Poison open source supply chains](attack-trees:docs/cicd/Supply-chain)
+* [Poison open source supply chains](red-cloud:docs/cicd/supply-chain)

@@ -76,5 +76,5 @@ Common problems:
    :caption: Links
 
    Overview threat models <https://tymyrddin.github.io/threat-models/>
-   CI/CD attack trees <https://tymyrddin.github.io/attack-trees/docs/cicd/README.html>
+   CI/CD attack trees <https://tymyrddin.github.io/red-cloud/docs/cicd/README.html>
    Building application and CI/CD targets <https://wyrd.netlify.app/>
