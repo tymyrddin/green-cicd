@@ -70,6 +70,6 @@ Common problems:
 .. toctree::
    :caption: Links
 
-   Overview threat models <https://tymyrddin.github.io/threat-models/>
+   Green Team <https://tymyrddin.github.io/green/>
    CI/CD attack trees <https://tymyrddin.github.io/red-cloud/docs/cicd/README.html>
-   Building application and CI/CD targets <https://wyrd.netlify.app/>
+   Building application and CI/CD targets <https://wyrd.tymyrddin.dev/>
