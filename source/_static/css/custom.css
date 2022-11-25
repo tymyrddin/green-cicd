@@ -38,3 +38,7 @@ a:hover {
 .wy-nav-top {
   background: #009900;
 }
+
+.rst-content code.literal, .rst-content tt.literal {
+  color: #009900;
+}
