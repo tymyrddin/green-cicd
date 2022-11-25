@@ -71,5 +71,5 @@ Common problems:
    :caption: Links
 
    Green Team <https://tymyrddin.github.io/green/>
-   CI/CD attack trees <https://tymyrddin.github.io/red-cloud/docs/cicd/README.html>
+   CI/CD attacks <https://tymyrddin.github.io/red-cloud/docs/cicd/README.html>
    Building application and CI/CD targets <https://wyrd.tymyrddin.dev/>
