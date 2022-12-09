@@ -70,6 +70,6 @@ Common problems:
 .. toctree::
    :caption: Links
 
-   Green Team <https://tymyrddin.github.io/green/>
-   CI/CD attacks <https://tymyrddin.github.io/red-cloud/docs/cicd/README.html>
+   Green Team <https://green.tymyrddin.dev/>
+   CI/CD attacks <https://red.tymyrddin.dev/projects/cloud/en/latest/>
    Building application and CI/CD targets <https://wyrd.tymyrddin.dev/>
